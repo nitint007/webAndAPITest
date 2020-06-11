@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Mindtrans purchase suite" verbose="1" parallel="false">
+
+	<test name="Demo Mindtrans Purchase flows">
+		<classes>
+			<class name="testCases.PositiveBuy"></class>
+			<class name="testCases.NegativeBuy"></class>
+		</classes>
+	</test>
+</suite>
