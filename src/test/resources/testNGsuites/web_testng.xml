@@ -5,8 +5,8 @@
 
 	<test name="Demo Mindtrans Purchase flows">
 		<classes>
-			<class name="testCases.PositiveBuy"></class>
-			<class name="testCases.NegativeBuy"></class>
+			<class name="testCases.web.PositiveBuy"></class>
+			<class name="testCases.web.NegativeBuy"></class>
 		</classes>
 	</test>
 </suite>

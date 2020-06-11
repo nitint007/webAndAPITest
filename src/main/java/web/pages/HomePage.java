@@ -1,23 +1,24 @@
 /**
  * Package containing page specific elements and respective methods
  */
-package pageObjects;
+package web.pages;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.testng.Assert;
+
+import web.base.WebSetup;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.WebElement;
-
-import base.WebSetup;
 
 /**
  * @author nitinthite
  * Class contains element locators and respective methods of from HomePage
  */
-public class HomePage extends WebSetup{
+public class HomePage extends WebSetup {
 		
 	// Class custom constructor
 	public HomePage() throws FileNotFoundException, IOException {

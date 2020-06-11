@@ -1,7 +1,7 @@
 /**
  * 
  */
-package base;
+package web.base;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -21,7 +21,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class WebSetup {
 
-
 	// Webdriver instance for easy access
 	public static WebDriver driver;
 	public static WebDriverWait wait;
@@ -31,7 +30,7 @@ public class WebSetup {
 	public WebSetup() throws FileNotFoundException, IOException {
 		BufferedReader reader;
 		try {
-			String configFilePath = "./src/test/resources/testdataresources/Data.properties";
+			String configFilePath = "./src/test/resources/testdataresources/testData/web/Data.properties";
 			reader = new BufferedReader(new FileReader(configFilePath));
 			properties = new Properties();
 			properties.load(reader);

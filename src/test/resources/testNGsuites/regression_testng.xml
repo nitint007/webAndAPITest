@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Master suite to verify WEB and API suite" verbose="1" parallel="true">
+
+	<test name="Check API comparator library">
+		<classes>
+			<class name="testCases.api.ValidAPI"></class>
+			<class name="testCases.api.InvalidAPI"></class>
+			<class name="testCases.api.CheckURL"></class>
+		</classes>
+	</test>
+	
+	<test name="Demo Mindtrans Purchase flows">
+		<classes>
+			<class name="testCases.web.PositiveBuy"></class>
+			<class name="testCases.web.NegativeBuy"></class>
+		</classes>
+	</test>
+</suite>

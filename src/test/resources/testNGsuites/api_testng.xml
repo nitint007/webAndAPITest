@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="API Comparator library suite" verbose="1" parallel="true">
+
+	<test name="Check API comparator library">
+		<classes>
+			<class name="testCases.api.ValidAPI"></class>
+			<class name="testCases.api.InvalidAPI"></class>
+			<class name="testCases.api.CheckURL"></class>
+		</classes>
+	</test>
+</suite>

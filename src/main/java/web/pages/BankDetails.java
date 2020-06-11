@@ -1,7 +1,7 @@
 /**
  * 
  */
-package pageObjects;
+package web.pages;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.WebElement;
 
-import base.WebSetup;
+import web.base.WebSetup;
 
 /**
  * @author nitinthite

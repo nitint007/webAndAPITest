@@ -1,16 +1,17 @@
 /**
  * 
  */
-package pageObjects;
+package web.pages;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.testng.Assert;
+
+import web.base.WebSetup;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
-import base.WebSetup;
 
 /**
  * @author nitinthite

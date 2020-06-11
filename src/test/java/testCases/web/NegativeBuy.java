@@ -1,38 +1,31 @@
 /**
  * 
  */
-package testCases;
+package testCases.web;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import base.WebSetup;
-import pageObjects.BankDetails;
-import pageObjects.CartPanel;
-import pageObjects.CreditCardPayment;
-import pageObjects.HomePage;
-import pageObjects.OrderSummary;
-import pageObjects.PaymentStatus;
-import pageObjects.SelectPayment;
+import web.base.WebSetup;
+import web.pages.BankDetails;
+import web.pages.CartPanel;
+import web.pages.CreditCardPayment;
+import web.pages.HomePage;
+import web.pages.OrderSummary;
+import web.pages.PaymentStatus;
+import web.pages.SelectPayment;
 
 /**
  * @author nitinthite
  *
  */
 public class NegativeBuy extends WebSetup {
-
-	// Classes utilised
-	HomePage homepage;
-	CartPanel cartPanel;
-	OrderSummary ordersummary;
-	SelectPayment selectpayment;
-	BankDetails bankdetails;
-	PaymentStatus paymentstatus;
-	CreditCardPayment payment;
 
 	public NegativeBuy() throws FileNotFoundException, IOException {
 		super();
@@ -43,15 +36,15 @@ public class NegativeBuy extends WebSetup {
 	public void itemAddedToCart() throws Throwable {
 
 		// Creating Page object for accessing respective methods
-		homepage = new HomePage();
+		HomePage homepage = new HomePage();
 
 		// Steps for adding item to cart and verifying same
 		homepage.clickBuyNowButton();
 
-		cartPanel = new CartPanel();
+		CartPanel cartPanel = new CartPanel();
 		cartPanel.clickCheckoutButton();
 
-		ordersummary = new OrderSummary();
+		OrderSummary ordersummary = new OrderSummary();
 		ordersummary.clickContinue();
 	}
 
@@ -59,10 +52,10 @@ public class NegativeBuy extends WebSetup {
 	public void enterInvalidDetails() throws Throwable {
 
 		// Payment details for Credit card
-		selectpayment = new SelectPayment();
+		SelectPayment selectpayment = new SelectPayment();
 		selectpayment.selectCreditCardOption();
 
-		payment = new CreditCardPayment();
+		CreditCardPayment payment = new CreditCardPayment();
 		payment.enterCardDetails(properties.getProperty("invalidCardNumber"), 
 				properties.getProperty("expiryDate"), properties.getProperty("cvv"));
 		payment.importantMessageDisaplyed();
@@ -72,10 +65,10 @@ public class NegativeBuy extends WebSetup {
 	// Method to verify results on invalid entries
 	@Test(priority = 3)
 	public void purchaseFailed() throws Throwable {
-		bankdetails = new BankDetails();
+		BankDetails bankdetails = new BankDetails();
 		bankdetails.enterOTP(properties.getProperty("otp"));
 
-		paymentstatus = new PaymentStatus();
+		PaymentStatus paymentstatus = new PaymentStatus();
 		paymentstatus.paymentStatusAction();
 	}
 
