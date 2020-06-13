@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Master suite to verify WEB and API suite" verbose="1" parallel="true">
-
+<suite name="Master suite to verify WEB and API suite" verbose="1" thread-count="2"
+	parallel="classes">
+	
 	<test name="Check API comparator library">
 		<classes>
 			<class name="testCases.api.ValidAPI"></class>

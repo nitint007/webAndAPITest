@@ -1,5 +1,5 @@
 /**
- * 
+ * Package containing page specific elements and respective methods
  */
 package web.pages;
 
@@ -15,7 +15,7 @@ import org.openqa.selenium.WebElement;
 
 /**
  * @author nitinthite
- *
+ * Class contains required element locators and respective methods of from Order Summary frame
  */
 public class OrderSummary extends WebSetup {
 	

@@ -1,5 +1,5 @@
 /**
- * 
+ * Package containing page specific elements and respective methods
  */
 package web.pages;
 
@@ -13,7 +13,7 @@ import web.base.WebSetup;
 
 /**
  * @author nitinthite
- *
+ * Class contains required element locators and respective methods of from payment status frame
  */
 public class PaymentStatus extends WebSetup {
 	

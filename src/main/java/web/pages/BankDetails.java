@@ -1,5 +1,5 @@
 /**
- * 
+ * Package for webpage objects and method related to that
  */
 package web.pages;
 
@@ -15,7 +15,7 @@ import web.base.WebSetup;
 
 /**
  * @author nitinthite
- * Class contains web elements and respective methods from BankDetails frame 
+ * Class contains required web elements and respective methods from BankDetails frame 
  */
 public class BankDetails extends WebSetup{
 

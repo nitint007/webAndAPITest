@@ -1,5 +1,5 @@
 /**
- * 
+ * Package contains testNG classes with test cases related to API test automation suite
  */
 package testCases.api;
 
@@ -15,10 +15,12 @@ import api.validator.ValidateFile;
 
 /**
  * @author nitinthite
- *
+ * Test steps to check if API is invalid
  */
 public class InvalidAPI extends Base{
 
+	ResponseComparator compare;
+	
 	public InvalidAPI() throws FileNotFoundException, IOException {
 		super();
 		// TODO Auto-generated constructor stub
@@ -35,7 +37,7 @@ public class InvalidAPI extends Base{
 	@Test(priority=2)
 	public void ifResponseNotEqual() throws Throwable {
 
-		ResponseComparator compare = new ResponseComparator();
+		compare = new ResponseComparator();
 		Assert.assertNotEquals(false,
 				compare.compareResponses(properties.getProperty("file1"), properties.getProperty("file2")));
 	}
@@ -43,7 +45,7 @@ public class InvalidAPI extends Base{
 	@Test(priority=3)
 	public void respondNotEqual() throws Throwable {
 
-		ResponseComparator compare = new ResponseComparator();
+		compare = new ResponseComparator();
 		Assert.assertNotEquals("URLs provided are Equal", compare.comparisonResult());
 	}
 

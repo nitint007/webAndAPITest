@@ -1,5 +1,5 @@
 /**
- * 
+ * Package contains testNG classes with test cases related to API test automation suite
  */
 package testCases.api;
 
@@ -15,7 +15,7 @@ import api.validator.ValidateFile;
 
 /**
  * @author nitinthite
- *
+ * To check URL validation test steps
  */
 public class CheckURL extends Base{
 

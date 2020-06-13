@@ -16,7 +16,7 @@ import org.openqa.selenium.WebElement;
 
 /**
  * @author nitinthite
- * Class contains element locators and respective methods of from HomePage
+ * Class contains required element locators and respective methods of from HomePage
  */
 public class HomePage extends WebSetup {
 		

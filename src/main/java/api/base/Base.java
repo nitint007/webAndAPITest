@@ -1,5 +1,5 @@
 /**
- * 
+ * Parent class for all classes used under API automation suite
  */
 package api.base;
 
@@ -11,14 +11,16 @@ import java.util.Properties;
 
 /**
  * @author nitinthite
- *
+ * Class with custom constructor to initialise objects for properties used in child classes
  */
 public class Base {
 	
 	public static Properties properties;
 	
-	// Class constructor for initialising objects
+		// Class constructor for initialising objects
 		public Base() throws FileNotFoundException, IOException {
+			
+			// To read file line by line
 			BufferedReader reader;
 			try {
 				String configFilePath = "./src/test/resources/testdataresources/configData/api/Config.properties";

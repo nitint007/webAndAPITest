@@ -1,5 +1,5 @@
 /**
- * 
+ * Package containing page specific elements and respective methods
  */
 package web.pages;
 
@@ -16,7 +16,7 @@ import org.openqa.selenium.WebElement;
 
  /**
  * @author nitinthite
- * Class contains web elements and respective methods for Select Payment Type frame 
+ * Class contains required web elements and respective methods for Select Payment Type frame 
  */
 public class SelectPayment extends WebSetup {
 	

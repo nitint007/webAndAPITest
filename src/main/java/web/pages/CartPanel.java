@@ -1,5 +1,5 @@
 /**
- * 
+ * Package for webpage objects and method related to that
  */
 package web.pages;
 
@@ -15,7 +15,7 @@ import org.openqa.selenium.WebElement;
 
 /**
  * @author nitinthite
- *
+ * Class contains required web elements and respective methods from CartPanel 
  */
 public class CartPanel extends WebSetup {
 	

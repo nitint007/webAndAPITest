@@ -22,11 +22,11 @@ import api.validator.ValidateURL;
  */
 public class ResponseComparator extends Base{
 	
-	
+	// To make variables accessible for sub classes and packages
 	protected String url1, url2, res1, res2;
 	boolean result = false;
 
-
+	
 	public ResponseComparator() throws FileNotFoundException, IOException {
 		super();
 		// TODO Auto-generated constructor stub

@@ -1,5 +1,5 @@
 /**
- * 
+ * Package contains testNG classes with test cases related to API test automation suite
  */
 package testCases.api;
 
@@ -15,7 +15,7 @@ import api.validator.ValidateFile;
 
 /**
  * @author nitinthite
- *
+ * Test steps to check if API is invalid
  */
 public class ValidAPI extends Base{
 
@@ -44,7 +44,7 @@ public class ValidAPI extends Base{
 	public void respondAsEqual() throws Throwable {
 
 		ResponseComparator compare = new ResponseComparator();
-		Assert.assertEquals("URLs provided are NOT Equal", compare.comparisonResult());
+		Assert.assertEquals(false, compare.comparisonResult());
 	}
 
 }

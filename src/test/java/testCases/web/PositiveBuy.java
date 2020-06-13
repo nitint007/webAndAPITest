@@ -1,5 +1,5 @@
 /**
- * 
+ * Package contains testNG classes with test cases related to WEB automation suite
  */
 package testCases.web;
 
@@ -7,20 +7,16 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.Test;
 
+import commonSteps.CommonPurchaseSteps;
 import web.base.WebSetup;
-import web.pages.BankDetails;
-import web.pages.CartPanel;
-import web.pages.CreditCardPayment;
 import web.pages.HomePage;
-import web.pages.OrderSummary;
-import web.pages.SelectPayment;
 
 /**
  * @author nitinthite
- *
+ * Test steps to check results on providing valid details
  */
 public class PositiveBuy extends WebSetup {
 
@@ -28,55 +24,30 @@ public class PositiveBuy extends WebSetup {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	@BeforeSuite
-	public void beforeAllScenarios()  {
-		System.out.println("Inside Hooks @Before");
+
+	@BeforeGroups("webautomation")
+	public void beforeAllScenarios() throws Exception {
+		System.out.println("Inside @BeforeGroups");
 		setUp();
 	}
 
-	@Test(priority=1)
-	public void itemAddedToCart() throws Throwable {
-		
-		// Creating Page object for accessing respective methods
-		HomePage homepage = new HomePage();
-		
-		// Steps for adding item to cart and verifying same
-		homepage.clickBuyNowButton();
-		
-		CartPanel cartPanel = new CartPanel();
-		cartPanel.clickCheckoutButton();
-		
-		OrderSummary ordersummary = new OrderSummary();
-		ordersummary.clickContinue();
-	}
+	@Test(priority = 1, groups = "webautomation")
+	public void purchaseWithValidDetails() throws Throwable {
 
-	@Test(priority=2)
-	public void enterValidDetails() throws Throwable {
-		
-		// Payment details for Credit card
-		SelectPayment selectpayment = new SelectPayment();
-	    selectpayment.selectCreditCardOption();
-	    
-	    CreditCardPayment payment = new CreditCardPayment();
-	    payment.enterCardDetails(properties.getProperty("validCardNumber"), 
-	    		properties.getProperty("expiryDate"), properties.getProperty("cvv"));
-	    payment.importantMessageDisaplyed();
-	    payment.clickPayNowButton();
+		CommonPurchaseSteps commonsteps = new CommonPurchaseSteps();
+		commonsteps.purchaseSteps(properties.getProperty("validCardNumber"));
 	}
 	
-	@Test(priority=3)
-	public void purchaseSuccess() throws Throwable {
-		
-		BankDetails bankdetails = new BankDetails();
-		bankdetails.enterOTP(properties.getProperty("otp"));
-		
+	@Test(priority = 2, groups = "webautomation")
+	public void verifySuccess() throws Throwable {
+
 		HomePage homepage = new HomePage();
-	    homepage.verifySuccessMessage();
+		homepage.verifySuccessMessage();
 	}
 	
+	// To close all active instances of webdriver
 	@AfterSuite
-	public void tearDown(){
+	public void tearDown() {
 		driver.quit();
 	}
 }
