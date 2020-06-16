@@ -34,6 +34,17 @@ The web tests require user inputs as browser names either 'chrome' or 'firefox'
 # IMP NOTE: You have to enter browser names 2 times as it accepts user input for 2 tests.
 
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+# Pre-requisite:
+
+As per official document- https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver
+
+The chrome driver should be available at '/usr/bin/chromedriver' on the machine that executing the suite on chrome browser.
+
+And same path needs to be set as 'PATH' system variable - hence no need to mention 'system.setProperty' for chrome
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
 # Steps to clone execute the tests:
 
 git clone https://github.com/nitint007/webAndAPITest

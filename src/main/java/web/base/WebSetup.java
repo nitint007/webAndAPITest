@@ -66,13 +66,13 @@ public class WebSetup {
 		// To check if parameter passed from TestNG is 'chrome'
 		if (browser.equalsIgnoreCase("chrome")) {
 			
-			// To create firefox instance
+			// To create chrome instance
 			driver = new ChromeDriver();
 		}
 		// Check if parameter passed as 'firefox'
 		else if (browser.equalsIgnoreCase("firefox")) {
 			
-			// create chrome instance
+			// create firefox instance
 			driver = new FirefoxDriver();
 		} else {
 			
