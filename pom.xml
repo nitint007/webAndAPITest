@@ -28,7 +28,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.1.0</version>
+			<version>6.14.3</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -65,28 +65,45 @@
 			<version>1.1</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>4.0.9</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.6</version>
+		</dependency>
+
+
 	</dependencies>
 	<build>
-		<!-- Source directory configuration -->
-		<sourceDirectory>src/test/java</sourceDirectory>
 		<plugins>
-			<!-- Following plugin executes the testng tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M4</version>
+				<configuration>
+					<suiteXmlFiles>
+					<!-- Need to pass testng.xml files as argument from command line -->
+						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.7.0</version>
 				<configuration>
-					<maven.compiler.source>1.8</maven.compiler.source>
-					<maven.compiler.target>1.8</maven.compiler.target>
+					<source>1.7</source>
+					<target>1.7</target>
 					<encoding>UTF-8</encoding>
-					<!-- Suite testng xml file to consider for test execution -->
-					<suiteXmlFiles>
-						<suiteXmlFile>web_testng.xml</suiteXmlFile>
-						<suiteXmlFile>api_testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
 </project>

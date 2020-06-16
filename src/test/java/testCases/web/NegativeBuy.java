@@ -3,14 +3,13 @@
  */
 package testCases.web;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
 import org.testng.annotations.Test;
-
 import commonSteps.CommonPurchaseSteps;
 import web.base.WebSetup;
 import web.pages.PaymentStatus;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  * @author nitinthite
@@ -25,14 +24,14 @@ public class NegativeBuy extends WebSetup {
 
 	@Test(priority = 3, groups = "webautomation")
 	public void purchaseWithInvalidDetails() throws Throwable {
-
+		
 		CommonPurchaseSteps commonsteps = new CommonPurchaseSteps();
 		commonsteps.purchaseSteps(properties.getProperty("invalidCardNumber"));
 	}
 	
 	@Test(priority = 4, groups = "webautomation")
 	public void verifyPaymentStatus() throws Throwable {
-
+		
 		PaymentStatus paymentstatus = new PaymentStatus();
 		paymentstatus.paymentStatusAction();
 	}

@@ -3,15 +3,17 @@
  */
 package testCases.api;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import api.base.Base;
 import api.comparator.ResponseComparator;
 import api.validator.ValidateFile;
+
+import org.testng.AssertJUnit;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.testng.Assert;
 
 /**
  * @author nitinthite
@@ -30,8 +32,8 @@ public class InvalidAPI extends Base{
 	public void validateFiles() throws Throwable {
 
 		ValidateFile vurl = new ValidateFile();
-		Assert.assertTrue(vurl.isValidFile(properties.getProperty("file1")));
-		Assert.assertTrue(vurl.isValidFile(properties.getProperty("file2")));
+		AssertJUnit.assertTrue(vurl.isValidFile(properties.getProperty("file1")));
+		AssertJUnit.assertTrue(vurl.isValidFile(properties.getProperty("file2")));
 	}
 	
 	@Test(priority=2)

@@ -3,13 +3,12 @@
  */
 package testCases.web;
 
+import org.testng.annotations.Test;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeGroups;
-import org.testng.annotations.Test;
-
 import commonSteps.CommonPurchaseSteps;
 import web.base.WebSetup;
 import web.pages.HomePage;
