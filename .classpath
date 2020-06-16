@@ -17,6 +17,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/javax/inject/javax.inject/1/javax.inject-1.jar" sourcepath="M2_REPO/javax/inject/javax.inject/1/javax.inject-1-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/javax/activation/activation/1.1.1/activation-1.1.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
@@ -43,9 +44,11 @@
 	<classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/testng/testng/6.14.3/testng-6.14.3.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/testng/testng/7.1.0/testng-7.1.0.jar" sourcepath="M2_REPO/org/testng/testng/7.1.0/testng-7.1.0-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/beust/jcommander/1.72/jcommander-1.72.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/google/inject/guice/4.1.0/guice-4.1.0-no_aop.jar"/>
+	<classpathentry kind="var" path="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/yaml/snakeyaml/1.21/snakeyaml-1.21.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/apache/logging/log4j/log4j-core/2.13.3/log4j-core-2.13.3.jar"/>
 	<classpathentry kind="var" path="M2_REPO/io/rest-assured/rest-assured/4.2.0/rest-assured-4.2.0.jar" sourcepath="M2_REPO/io/rest-assured/rest-assured/4.2.0/rest-assured-4.2.0-sources.jar"/>

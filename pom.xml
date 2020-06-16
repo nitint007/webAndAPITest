@@ -29,7 +29,7 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.14.3</version>
-			<scope>test</scope>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
@@ -48,7 +48,7 @@
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
 			<version>4.2.0</version>
-			<scope>test</scope>
+			<!-- <scope>test</scope> -->
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.json/json -->
@@ -78,9 +78,8 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.6</version>
 		</dependency>
-
-
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -89,7 +88,7 @@
 				<version>3.0.0-M4</version>
 				<configuration>
 					<suiteXmlFiles>
-					<!-- Need to pass testng.xml files as argument from command line -->
+						<!-- Need to pass testng.xml files as argument from command line -->
 						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
@@ -99,8 +98,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.7.0</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
