@@ -32,8 +32,8 @@ public class InvalidAPI extends Base{
 	public void validateFiles() throws Throwable {
 
 		ValidateFile vurl = new ValidateFile();
-		AssertJUnit.assertTrue(vurl.isValidFile(properties.getProperty("file1")));
-		AssertJUnit.assertTrue(vurl.isValidFile(properties.getProperty("file2")));
+		AssertJUnit.assertTrue(vurl.isValidFile(properties.getProperty("longfile1")));
+		AssertJUnit.assertTrue(vurl.isValidFile(properties.getProperty("longfile2")));
 	}
 	
 	@Test(priority=2)
