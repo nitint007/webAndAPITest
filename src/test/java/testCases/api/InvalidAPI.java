@@ -41,7 +41,7 @@ public class InvalidAPI extends Base{
 
 		compare = new ResponseComparator();
 		Assert.assertNotEquals(false,
-				compare.compareResponses(properties.getProperty("file1"), properties.getProperty("file2")));
+				compare.compareResponses(properties.getProperty("longfile1"), properties.getProperty("longfile2")));
 	}
 	
 	@Test(priority=3)

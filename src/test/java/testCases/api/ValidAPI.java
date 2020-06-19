@@ -37,7 +37,7 @@ public class ValidAPI extends Base{
 
 		ResponseComparator compare = new ResponseComparator();
 		AssertJUnit.assertEquals(true,
-				compare.compareResponses(properties.getProperty("file1"), properties.getProperty("file2")));
+				compare.compareResponses(properties.getProperty("longfile1"), properties.getProperty("longfile2")));
 	}
 	
 	@Test(priority=3)
