@@ -1,7 +1,6 @@
 # webAndAPITest
 
-The project is fix on solution for DKatalis lab assignment that were not up to the mark in first submit
-The new solution is updated to TestNG instead of Cucumber
+This is an Assignment project to showcase same problem statement with TESTNG framework intead of Cucumber.
 
 # The new solution contains 2 suites in one framework:
 
