@@ -1,6 +1,6 @@
 # webAndAPITest
 
-This is an Assignment project to showcase same problem statement with TESTNG framework intead of Cucumber.
+This is an Assignment project to showcase same problem statement with TESTNG framework that was first resolved with use of Cucumber (BDD).
 
 # The new solution contains 2 suites in one framework:
 
