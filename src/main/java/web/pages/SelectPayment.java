@@ -1,58 +1,57 @@
 /**
- * Package containing page specific elements and respective methods
+ * 
  */
 package web.pages;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import web.base.WebSetup;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-
  /**
  * @author nitinthite
- * Class contains required web elements and respective methods for Select Payment Type frame 
+ * Class contains web elements and respective methods for Select Payment Type frame 
  */
 public class SelectPayment extends WebSetup {
+	
+	
+	@FindBy(id = "payment-list")
+	WebElement selectPaymentPop;
+	
+	@FindBy(xpath = "//a[@href='#/credit-card']")
+	WebElement creditCardOption;
+	
 	
 	// Class constructor to initialising same properties as parent constructor
 	public SelectPayment() throws FileNotFoundException, IOException {
 		
 		super();
+		
+		PageFactory.initElements(driver, this);
+		
 		assertSelectPaymentDisplayed();
 	}
 
 	// Making sure if driver reached to intended page
 	public void assertSelectPaymentDisplayed() {
 		
-		Assert.assertTrue(selectPaymentPop().isDisplayed());
+		Assert.assertTrue(selectPaymentPop.isDisplayed());
 	}
 
 	public void isCreditCardOptionDisplayed() {
 		
-		Assert.assertTrue(creditCardOption().isDisplayed());
+		Assert.assertTrue(creditCardOption.isDisplayed());
 	}
 
 	public void selectCreditCardOption() {
 		
 		isCreditCardOptionDisplayed();
 
-		creditCardOption().click();
-	}
-
-	// ******** Element locators listed below for the SELECT PAYMENT TYPE - are used by methods above ********
-	private WebElement selectPaymentPop() {
-
-		return driver.findElement(By.id("payment-list"));
-	}
-
-	private WebElement creditCardOption() {
-
-		return driver.findElement(By.xpath("//a[@href='#/credit-card']"));
+		creditCardOption.click();
 	}
 }

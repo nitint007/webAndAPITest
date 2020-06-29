@@ -1,6 +1,6 @@
 # webAndAPITest
 
-This is an Assignment project to showcase same problem statement with TESTNG framework that was first resolved with use of Cucumber (BDD).
+This is an Assignment project to showcase same problem statement solution with TESTNG framework that was first resolved with use of Cucumber (BDD).
 
 # The new solution contains 2 suites in one framework:
 
@@ -13,7 +13,7 @@ This is an Assignment project to showcase same problem statement with TESTNG fra
 
 # Framework
 
-Page Object model Test automation framework using Selenium with Java, TestNG and Maven
+Page Factory (Page Object model design pattern) Test automation framework using Selenium Webdriver with Java, TestNG, Maven and Rest Assured
 
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

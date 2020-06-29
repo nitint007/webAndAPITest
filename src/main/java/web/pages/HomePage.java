@@ -6,24 +6,36 @@ package web.pages;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.openqa.selenium.NoSuchWindowException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import web.base.WebSetup;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchWindowException;
-import org.openqa.selenium.WebElement;
-
 /**
  * @author nitinthite
- * Class contains required element locators and respective methods of from HomePage
+ * Class contains element locators and respective methods of from HomePage
  */
-public class HomePage extends WebSetup {
+public class HomePage extends WebSetup{
+	
+	@FindBy(xpath = "//*[text()='Midtrans Pillow']")
+	WebElement homePage;
+	
+	@FindBy(xpath = "//*[@class='btn buy']")
+	WebElement buyNowButton;
+	
+	@FindBy(xpath = "//*[text()='Thank you for your purchase.']")
+	WebElement thankyouMessage;
 		
 	// Class custom constructor
 	public HomePage() throws FileNotFoundException, IOException {
 		
 		super();
+		
+		PageFactory.initElements(driver, this);
+		
 		verifyHomePage();
 	}
 
@@ -31,7 +43,7 @@ public class HomePage extends WebSetup {
 	public void verifyHomePage() throws NoSuchWindowException {
 		
 		try {
-			if (homePage().isDisplayed()) {
+			if (homePage.isDisplayed()) {
 				
 				System.out.println("User is on Home page");
 			}
@@ -47,30 +59,13 @@ public class HomePage extends WebSetup {
 
 	public void clickBuyNowButton() {
 		
-		Assert.assertTrue(buyNowButton().isDisplayed());
+		Assert.assertTrue(buyNowButton.isDisplayed());
 		
-		buyNowButton().click();
+		buyNowButton.click();
 	}
 	
 	public void verifySuccessMessage() {
 		
-		Assert.assertTrue(thankyouMessage().isDisplayed());
-	}
-
-	
-	// ******** Element locators listed below for the Home page - are used by methods above ********
-	private WebElement homePage() {
-		
-		return driver.findElement(By.xpath("//*[text()='Midtrans Pillow']"));
-	}
-
-	private WebElement buyNowButton() {
-		
-		return driver.findElement(By.xpath("//*[@class='btn buy']"));
-	}
-	
-	private WebElement thankyouMessage() {
-		
-		return driver.findElement(By.xpath("//*[text()='Thank you for your purchase.']"));
+		Assert.assertTrue(thankyouMessage.isDisplayed());
 	}
 }
